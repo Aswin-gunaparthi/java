@@ -20,6 +20,8 @@ public class Calculator {
         System.out.print("enter the second value: ");
         value2 = sc.nextDouble();
 
+         /*
+
         if (operation == '+'){
             result = value + value2;
         } else if (operation == '-') {
@@ -40,6 +42,30 @@ public class Calculator {
         else {
             System.out.println("invalid operation");
             valid = false;
+        }
+
+
+
+         */
+
+        switch (operation){
+            case '+' -> result = value + value2;
+            case '-' -> result = value - value2;
+            case '*' -> result = value * value2;
+            case '/' -> {
+                if (value2 != 0){
+                    result = value / value2;
+                }
+               else {
+                    System.out.println("cannot divide by zero");
+                    valid = false;
+                }
+            }
+            case '%' -> result = value % value2;
+            default -> {
+                System.out.println("invalid operator");
+                valid = false;
+            }
         }
 
         if (valid != false){
