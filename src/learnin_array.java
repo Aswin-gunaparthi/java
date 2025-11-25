@@ -32,6 +32,19 @@ public class learnin_array {
             System.out.println(food);
         }
 
+        System.out.print("which element do you want to search for: ");
+        String target = scanner.nextLine();
+
+        for (int i = 0; i < foods.length; i++){
+            if (foods[i].equals(target)){
+                System.out.println("Target is found at index: " + i);
+                break;
+            }
+            else if (i == foods.length - 1) {
+                System.out.println("Element is not in array");
+            }
+        }
+
         scanner.close();
     }
 }
