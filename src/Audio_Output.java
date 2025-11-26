@@ -29,24 +29,11 @@ public class Audio_Output {
                 response = sc.next().toUpperCase();
 
                 switch (response) {
-                    case "P":
-                        clip.start();
-                        break;
-
-                    case "S":
-                        clip.stop();
-                        break;
-
-                    case "R":
-                        clip.setMicrosecondPosition(0);
-                        break;
-
-                    case "Q":
-                        clip.close();
-                        break;
-
-                    default:
-                        System.out.println("Invalid option");
+                    case "P" -> clip.start();
+                    case "S" -> clip.stop();
+                    case "R" -> clip.setMicrosecondPosition(0);
+                    case "Q" -> clip.close();
+                    default ->  System.out.println("Invalid option");
                 }
             }
         }
