@@ -1,14 +1,13 @@
 public class car {
 
-    String make = "Ford";
-    String model = "Mustang";
-    int year = 2025;
-    double price = 80000;
+    private String make = "Ford";
+    private String model = "Mustang";
+    private int year = 2025;
+    private double price = 80000;
     boolean isRunning = false;
 
-    car(String make, String model, int year, double price){
+    car( String model, int year, double price){
         this.model = model;
-        this.make = make;
         this.year = year;
         this.price = price;
     }
@@ -26,7 +25,22 @@ public class car {
         System.out.println("You are driving :" + model);
     }
 
+    @Override
+    public String toString(){
+        return this.model + this.make + this.year + this.price;
+    }
 
+    String getModel(){
+        return this.model;
+    }
+
+    double getprice(){
+        return this.price;
+    }
+
+    int getyear(){
+        return this.year;
+    }
 
 
 }
