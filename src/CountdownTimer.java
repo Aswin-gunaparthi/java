@@ -5,10 +5,6 @@ import java.util.TimerTask;
 public class CountdownTimer {
     public static void countdown(int response) {
 
-//        Scanner sc = new Scanner(System.in);
-
-//        System.out.print("Enter the seconds to countdown from: ");
-//        int response = sc.nextInt();
 
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
