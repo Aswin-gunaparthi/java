@@ -5,7 +5,6 @@ import java.util.TimerTask;
 public class CountdownTimer {
     public static void countdown(int response) {
 
-
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
 
