@@ -1,4 +1,6 @@
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class HangMan_Game {
@@ -7,9 +9,22 @@ public class HangMan_Game {
         String filePath = "words.txt";
         ArrayList<String> words = new ArrayList<>();
 
-        String line
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null){
+                words.add(line.trim());
+            }
+        }
+        catch (FileNotFoundException e){
+            System.out.println("could not find file");
+        }
+        catch (IOException e){
+            System.out.println("Something went wrong");
+        }
 
-        String word = "mouse";
+        Random random = new Random();
+        String word = words.get(random.nextInt(words.size()));
+
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<Character> wordState = new ArrayList<>();
