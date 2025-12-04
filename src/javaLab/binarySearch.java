@@ -13,6 +13,12 @@ public class binarySearch {
 
         int[] list = new int[i];
 
+        for (int j = 0; j < i; j++){
+            System.out.println((i + 1) + " Element: " );
+            list[i] = scanner.nextInt();
+        }
+        System.out.println("enter the list: ");
+
 
         scanner.close();
     }
