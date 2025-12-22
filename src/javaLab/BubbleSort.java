@@ -1,7 +1,5 @@
 package javaLab;
-import java.util.Arrays;
 import java.util.Scanner;
-
 // Write a JAVA program to sort for an element in a given list of elements using bubble sort
 
 public class BubbleSort{
@@ -10,6 +8,7 @@ public class BubbleSort{
         Scanner scanner = new Scanner(System.in);
         
         int size;
+        int temp;
         
         System.out.print("Enter size of the list: ");
         size = scanner.nextInt();
@@ -20,7 +19,16 @@ public class BubbleSort{
             nums[i] = scanner.nextInt();
         }
 
-        Arrays.sort(nums);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (nums[j] > nums[j + 1] ){
+                    temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+            
+        }
 
         System.err.println("The sorted list is: ");
 
