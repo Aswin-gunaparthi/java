@@ -25,19 +25,24 @@ public class binarySearch {
         System.out.print("Enter the element to search for: ");
         int target = scanner.nextInt();
 
-        BinarySearch( arr,  target);
-
+        if (BinarySearch( arr,  target) != -1){
+            System.out.println("The element is present in the array");
+        }
+        else{
+            System.out.println("The element is not in the Array");
+        }
 
         scanner.close();
     }
-
     public static int BinarySearch(int arr[], int target){
 
-        int left = arr[0];
+        int left = 0;
         int right = arr.length - 1;
         int mid = left + (right - left)/2;
 
         while (left <= right){
+            mid = left + (right - left)/2;
+
             if (arr[mid] == target){
                 return mid;
             }
